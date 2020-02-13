@@ -4,6 +4,7 @@
         <attribute name="coverImage" optional="YES" attributeType="Binary"/>
         <attribute name="coverVideo" optional="YES" attributeType="Binary"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="categories" inverseEntity="Tag"/>
@@ -16,6 +17,7 @@
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="inStockCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="price" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="items" inverseEntity="Category"/>
@@ -40,9 +42,9 @@
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="tags" inverseEntity="Item"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="223"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="238"/>
         <element name="SortingValues" positionX="340.7265625" positionY="-17.98828125" width="128" height="193"/>
         <element name="Tag" positionX="-58.17578125" positionY="-206.46484375" width="128" height="88"/>
-        <element name="Category" positionX="162" positionY="9" width="128" height="133"/>
+        <element name="Category" positionX="162" positionY="9" width="128" height="148"/>
     </elements>
 </model>

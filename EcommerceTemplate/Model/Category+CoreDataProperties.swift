@@ -21,6 +21,7 @@ extension Category {
     @NSManaged public var coverImage: Data?
     @NSManaged public var coverVideo: Data?
     @NSManaged public var desc: String?
+    @NSManaged public var size: Int16
     @NSManaged public var items: NSSet?
     @NSManaged public var tags: NSSet?
 

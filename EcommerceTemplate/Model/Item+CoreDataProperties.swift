@@ -26,6 +26,7 @@ extension Item {
     @NSManaged public var inStockCount: Int16
     @NSManaged public var beforeDiscountPrice: Float
     @NSManaged public var coverVideo: Data?
+    @NSManaged public var size: Int16
     @NSManaged public var sortingValues: SortingValues?
     @NSManaged public var tags: NSSet?
     @NSManaged public var category: Category?
