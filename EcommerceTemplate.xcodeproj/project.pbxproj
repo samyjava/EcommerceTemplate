@@ -15,6 +15,14 @@
 		70DB2C8823F5271200AEDAC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70DB2C8723F5271200AEDAC4 /* Assets.xcassets */; };
 		70DB2C8B23F5271200AEDAC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DB2C8923F5271200AEDAC4 /* LaunchScreen.storyboard */; };
 		70DB2C9623F5271200AEDAC4 /* EcommerceTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2C9523F5271200AEDAC4 /* EcommerceTemplateTests.swift */; };
+		70DB2CA923F54B0800AEDAC4 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA123F54B0800AEDAC4 /* Category+CoreDataClass.swift */; };
+		70DB2CAA23F54B0800AEDAC4 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA223F54B0800AEDAC4 /* Category+CoreDataProperties.swift */; };
+		70DB2CAB23F54B0800AEDAC4 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA323F54B0800AEDAC4 /* Item+CoreDataClass.swift */; };
+		70DB2CAC23F54B0800AEDAC4 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA423F54B0800AEDAC4 /* Item+CoreDataProperties.swift */; };
+		70DB2CAD23F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA523F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift */; };
+		70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA623F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift */; };
+		70DB2CAF23F54B0800AEDAC4 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA723F54B0800AEDAC4 /* Tag+CoreDataClass.swift */; };
+		70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,14 @@
 		70DB2C9123F5271200AEDAC4 /* EcommerceTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcommerceTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DB2C9523F5271200AEDAC4 /* EcommerceTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcommerceTemplateTests.swift; sourceTree = "<group>"; };
 		70DB2C9723F5271300AEDAC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70DB2CA123F54B0800AEDAC4 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70DB2CA223F54B0800AEDAC4 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70DB2CA323F54B0800AEDAC4 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70DB2CA423F54B0800AEDAC4 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70DB2CA523F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortingValues+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70DB2CA623F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortingValues+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70DB2CA723F54B0800AEDAC4 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,7 @@
 		70DB2C7A23F5270E00AEDAC4 /* EcommerceTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				70DB2CA023F54A6C00AEDAC4 /* Model */,
 				70DB2C7B23F5270E00AEDAC4 /* AppDelegate.swift */,
 				70DB2C7D23F5270E00AEDAC4 /* SceneDelegate.swift */,
 				70DB2C7F23F5270E00AEDAC4 /* ViewController.swift */,
@@ -100,6 +117,21 @@
 				70DB2C9723F5271300AEDAC4 /* Info.plist */,
 			);
 			path = EcommerceTemplateTests;
+			sourceTree = "<group>";
+		};
+		70DB2CA023F54A6C00AEDAC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70DB2CA123F54B0800AEDAC4 /* Category+CoreDataClass.swift */,
+				70DB2CA223F54B0800AEDAC4 /* Category+CoreDataProperties.swift */,
+				70DB2CA323F54B0800AEDAC4 /* Item+CoreDataClass.swift */,
+				70DB2CA423F54B0800AEDAC4 /* Item+CoreDataProperties.swift */,
+				70DB2CA523F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift */,
+				70DB2CA623F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift */,
+				70DB2CA723F54B0800AEDAC4 /* Tag+CoreDataClass.swift */,
+				70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +236,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DB2C8023F5270E00AEDAC4 /* ViewController.swift in Sources */,
+				70DB2CAA23F54B0800AEDAC4 /* Category+CoreDataProperties.swift in Sources */,
+				70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */,
+				70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */,
+				70DB2CAC23F54B0800AEDAC4 /* Item+CoreDataProperties.swift in Sources */,
 				70DB2C7C23F5270E00AEDAC4 /* AppDelegate.swift in Sources */,
 				70DB2C8623F5270E00AEDAC4 /* EcommerceTemplate.xcdatamodeld in Sources */,
+				70DB2CA923F54B0800AEDAC4 /* Category+CoreDataClass.swift in Sources */,
 				70DB2C7E23F5270E00AEDAC4 /* SceneDelegate.swift in Sources */,
+				70DB2CAF23F54B0800AEDAC4 /* Tag+CoreDataClass.swift in Sources */,
+				70DB2CAB23F54B0800AEDAC4 /* Item+CoreDataClass.swift in Sources */,
+				70DB2CAD23F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
