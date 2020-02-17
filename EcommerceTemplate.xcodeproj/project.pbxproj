@@ -23,6 +23,9 @@
 		70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA623F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift */; };
 		70DB2CAF23F54B0800AEDAC4 /* Tag+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA723F54B0800AEDAC4 /* Tag+CoreDataClass.swift */; };
 		70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */; };
+		70DB2CB423F55AED00AEDAC4 /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DB2CB323F55AED00AEDAC4 /* Item.storyboard */; };
+		70DB2CB723F55CD000AEDAC4 /* SuperCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */; };
+		70DBE07523F92B1200BB4A24 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		70DB2CA623F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortingValues+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		70DB2CA723F54B0800AEDAC4 /* Tag+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataClass.swift"; sourceTree = "<group>"; };
 		70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70DB2CB323F55AED00AEDAC4 /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
+		70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCategoryViewController.swift; sourceTree = "<group>"; };
+		70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		70DB2C7A23F5270E00AEDAC4 /* EcommerceTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				70DB2CB123F55AA800AEDAC4 /* View */,
 				70DB2CA023F54A6C00AEDAC4 /* Model */,
 				70DB2C7B23F5270E00AEDAC4 /* AppDelegate.swift */,
 				70DB2C7D23F5270E00AEDAC4 /* SceneDelegate.swift */,
@@ -132,6 +139,40 @@
 				70DB2CA823F54B0800AEDAC4 /* Tag+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70DB2CB123F55AA800AEDAC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70DBE07323F92B0100BB4A24 /* Cells */,
+				70DB2CB523F55C8D00AEDAC4 /* Controllers */,
+				70DB2CB223F55AB000AEDAC4 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70DB2CB223F55AB000AEDAC4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				70DB2CB323F55AED00AEDAC4 /* Item.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		70DB2CB523F55C8D00AEDAC4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		70DBE07323F92B0100BB4A24 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DB2C8B23F5271200AEDAC4 /* LaunchScreen.storyboard in Resources */,
+				70DB2CB423F55AED00AEDAC4 /* Item.storyboard in Resources */,
 				70DB2C8823F5271200AEDAC4 /* Assets.xcassets in Resources */,
 				70DB2C8323F5270E00AEDAC4 /* Main.storyboard in Resources */,
 			);
@@ -236,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DB2C8023F5270E00AEDAC4 /* ViewController.swift in Sources */,
+				70DBE07523F92B1200BB4A24 /* CategoryCollectionViewCell.swift in Sources */,
 				70DB2CAA23F54B0800AEDAC4 /* Category+CoreDataProperties.swift in Sources */,
+				70DB2CB723F55CD000AEDAC4 /* SuperCategoryViewController.swift in Sources */,
 				70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */,
 				70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */,
 				70DB2CAC23F54B0800AEDAC4 /* Item+CoreDataProperties.swift in Sources */,

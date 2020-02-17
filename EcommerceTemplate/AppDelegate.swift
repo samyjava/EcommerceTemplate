@@ -16,6 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let categories = try! persistentContainer.viewContext.fetch(Category.fetchRequest()) as! [Category]
+        categories.forEach{
+            persistentContainer.viewContext.delete($0)
+        }
+        for i in 0...19 {
+            let cat = Category(context: persistentContainer.viewContext)
+            cat.title = String(i)
+            cat.desc = "By launching a mobile app for your restaurant, you’ll allow your customers to order food online, check out the menus and make reservations. This will generate more sales for your restaurant and will bring in an additional revenue stream. Using this fully implemented Restaurant App Template you’re saving thousands of dollars and thousands of development hours. Save precious time and money by downloading this customizable iPhone app template."
+        }
+        saveContext()
+        
         return true
     }
 
