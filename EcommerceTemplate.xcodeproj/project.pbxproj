@@ -26,6 +26,9 @@
 		70DB2CB423F55AED00AEDAC4 /* Item.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70DB2CB323F55AED00AEDAC4 /* Item.storyboard */; };
 		70DB2CB723F55CD000AEDAC4 /* SuperCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */; };
 		70DBE07523F92B1200BB4A24 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */; };
+		70DBE07823FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07723FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift */; };
+		70DBE07D23FD148700BB4A24 /* CategoryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */; };
+		70DBE07F23FD14C700BB4A24 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07E23FD14C700BB4A24 /* CategoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		70DB2CB323F55AED00AEDAC4 /* Item.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Item.storyboard; sourceTree = "<group>"; };
 		70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCategoryViewController.swift; sourceTree = "<group>"; };
 		70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		70DBE07723FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionBuilder.swift; sourceTree = "<group>"; };
+		70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceType.swift; sourceTree = "<group>"; };
+		70DBE07E23FD14C700BB4A24 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,8 @@
 		70DB2C7A23F5270E00AEDAC4 /* EcommerceTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				70DBE07A23FD11C900BB4A24 /* Business */,
+				70DBE07923FD11BC00BB4A24 /* Services */,
 				70DB2CB123F55AA800AEDAC4 /* View */,
 				70DB2CA023F54A6C00AEDAC4 /* Model */,
 				70DB2C7B23F5270E00AEDAC4 /* AppDelegate.swift */,
@@ -144,6 +152,7 @@
 		70DB2CB123F55AA800AEDAC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70DBE07623FBC6FE00BB4A24 /* SectionBuilder */,
 				70DBE07323F92B0100BB4A24 /* Cells */,
 				70DB2CB523F55C8D00AEDAC4 /* Controllers */,
 				70DB2CB223F55AB000AEDAC4 /* Storyboards */,
@@ -173,6 +182,38 @@
 				70DBE07423F92B1200BB4A24 /* CategoryCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		70DBE07623FBC6FE00BB4A24 /* SectionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				70DBE07723FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift */,
+			);
+			path = SectionBuilder;
+			sourceTree = "<group>";
+		};
+		70DBE07923FD11BC00BB4A24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */,
+				70DBE07E23FD14C700BB4A24 /* CategoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		70DBE07A23FD11C900BB4A24 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				70DBE07B23FD11E600BB4A24 /* ViewModels */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		70DBE07B23FD11E600BB4A24 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,13 +323,16 @@
 				70DB2CAA23F54B0800AEDAC4 /* Category+CoreDataProperties.swift in Sources */,
 				70DB2CB723F55CD000AEDAC4 /* SuperCategoryViewController.swift in Sources */,
 				70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */,
+				70DBE07D23FD148700BB4A24 /* CategoryServiceType.swift in Sources */,
 				70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */,
 				70DB2CAC23F54B0800AEDAC4 /* Item+CoreDataProperties.swift in Sources */,
+				70DBE07823FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift in Sources */,
 				70DB2C7C23F5270E00AEDAC4 /* AppDelegate.swift in Sources */,
 				70DB2C8623F5270E00AEDAC4 /* EcommerceTemplate.xcdatamodeld in Sources */,
 				70DB2CA923F54B0800AEDAC4 /* Category+CoreDataClass.swift in Sources */,
 				70DB2C7E23F5270E00AEDAC4 /* SceneDelegate.swift in Sources */,
 				70DB2CAF23F54B0800AEDAC4 /* Tag+CoreDataClass.swift in Sources */,
+				70DBE07F23FD14C700BB4A24 /* CategoryService.swift in Sources */,
 				70DB2CAB23F54B0800AEDAC4 /* Item+CoreDataClass.swift in Sources */,
 				70DB2CAD23F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift in Sources */,
 			);
