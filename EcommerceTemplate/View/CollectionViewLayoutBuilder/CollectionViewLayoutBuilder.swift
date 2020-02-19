@@ -15,7 +15,7 @@ enum SectionType : Int {
     case oneBigTwoSmallInAGroup = 3
 }
 
-struct CollectionViewSectionBuilder {
+struct CollectionViewLayoutBuilder {
     func createSection(sectionType: SectionType, orthogonalScrollingBehavior: UICollectionLayoutSectionOrthogonalScrollingBehavior) -> NSCollectionLayoutSection {
         var containerGroup: NSCollectionLayoutGroup? = nil
         
@@ -69,5 +69,13 @@ struct CollectionViewSectionBuilder {
         let section = NSCollectionLayoutSection(group: containerGroup!)
         section.orthogonalScrollingBehavior = orthogonalScrollingBehavior
         return section
+    }
+    
+    func createLayout(sections: [(SectionType,UICollectionLayoutSectionOrthogonalScrollingBehavior)]) -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout {
+            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            return self.createSection(sectionType: sections[sectionIndex].0, orthogonalScrollingBehavior: sections[sectionIndex].1)
+        }
+        return layout
     }
 }

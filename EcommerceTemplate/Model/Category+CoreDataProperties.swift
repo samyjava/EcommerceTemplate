@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.swift
 //  EcommerceTemplate
 //
-//  Created by Sam Javadizadeh on 2/13/20.
+//  Created by Sam Javadizadeh on 2/19/20.
 //  Copyright © 2020 Sam Javadizadeh. All rights reserved.
 //
 //
@@ -17,13 +17,15 @@ extension Category {
         return NSFetchRequest<Category>(entityName: "Category")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var coverImage: Data?
-    @NSManaged public var coverVideo: Data?
+    @NSManaged public var coverImage: URL?
+    @NSManaged public var coverVideo: URL?
     @NSManaged public var desc: String?
     @NSManaged public var size: Int16
+    @NSManaged public var title: String?
+    @NSManaged public var groupID: Int16
     @NSManaged public var items: NSSet?
     @NSManaged public var tags: NSSet?
+    @NSManaged public var section: Section?
 
 }
 

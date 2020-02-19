@@ -15,43 +15,18 @@ class SuperCategoryViewController: UIViewController, ViewModelProvided {
     
     //Properties
     internal var viewModel: CategoryViewModel!
-    let sectionBuilder = CollectionViewSectionBuilder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureHierarchy()
-        //Temporary
-        self.setViewModel(viewModel: CategoryViewModel(appDelegate: UIApplication.shared.delegate as! AppDelegate))
+
+        /// Temporary -------------------
+        let categoryService = CategoryService(appDelegate: UIApplication.shared.delegate as! AppDelegate)
+        self.setViewModel(viewModel: CategoryViewModel(appDelegate: UIApplication.shared.delegate as! AppDelegate, categoryService: categoryService))
+        ///-------------------
         self.viewModel.configureCollectionView(collectionView: mainCollectionView)
+        self.mainCollectionView.delegate = self
     }
     
-}
-
-extension SuperCategoryViewController {
-    func configureHierarchy() {
-        mainCollectionView.collectionViewLayout = createLayout()
-        mainCollectionView.delegate = self
-        mainCollectionView.backgroundColor = .systemBackground
-        mainCollectionView.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        self.view.addSubview(mainCollectionView)
-    }
-    
-    
-    func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout {
-            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-
-            switch sectionIndex {
-            case 0:
-                return self.sectionBuilder.createSection(sectionType: .singleCol, orthogonalScrollingBehavior: .groupPaging)
-            case 1:
-                return self.sectionBuilder.createSection(sectionType: .fourInAGroup, orthogonalScrollingBehavior: .groupPaging)
-            default:
-                return nil
-            }
-        }
-        return layout
-    }
 }
 
 extension SuperCategoryViewController: UICollectionViewDelegate {

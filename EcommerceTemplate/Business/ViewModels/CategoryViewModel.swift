@@ -17,12 +17,17 @@ struct CategoryViewModel {
     }
     
     let appDelegate: AppDelegate
+    var categoryService: CategoryServiceType
+    let collectionViewLayoutBuilder = CollectionViewLayoutBuilder()
     
-    init(appDelegate: AppDelegate) {
+    init(appDelegate: AppDelegate, categoryService: CategoryServiceType) {
         self.appDelegate = appDelegate
+        self.categoryService = categoryService
     }
     
     mutating func configureCollectionView(collectionView: UICollectionView){
+        collectionView.collectionViewLayout = self.collectionViewLayoutBuilder.createLayout(sections: [(.singleCol,.groupPaging),(.fourInAGroup,.groupPaging)])
+        
         mainDataSource = UICollectionViewDiffableDataSource<Section, Category>(collectionView: collectionView){
             (collectionView: UICollectionView, indexPath: IndexPath,
             category: Category) -> UICollectionViewCell? in
@@ -31,8 +36,7 @@ struct CategoryViewModel {
             return cell
         }
         
-        var categoryService = CategoryService(appDelegate: UIApplication.shared.delegate as! AppDelegate)
-        let fetchedObjects = try! categoryService.getAllCategories()
+        let fetchedObjects = try! self.categoryService.getAllCategories()
         
         var snapShot = NSDiffableDataSourceSnapshot<Section, Category>()
         snapShot.appendSections([.main])
