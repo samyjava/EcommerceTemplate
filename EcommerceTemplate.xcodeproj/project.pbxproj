@@ -29,6 +29,8 @@
 		70DBE07823FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07723FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift */; };
 		70DBE07D23FD148700BB4A24 /* CategoryServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */; };
 		70DBE07F23FD14C700BB4A24 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE07E23FD14C700BB4A24 /* CategoryService.swift */; };
+		70DBE08123FD1AC500BB4A24 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08023FD1AC500BB4A24 /* CategoryViewModel.swift */; };
+		70DBE08523FD2A7800BB4A24 /* ViewModelProvided.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		70DBE07723FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionBuilder.swift; sourceTree = "<group>"; };
 		70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceType.swift; sourceTree = "<group>"; };
 		70DBE07E23FD14C700BB4A24 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		70DBE08023FD1AC500BB4A24 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvided.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */,
+				70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		70DBE07B23FD11E600BB4A24 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				70DBE08023FD1AC500BB4A24 /* CategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -328,12 +334,14 @@
 				70DB2CAC23F54B0800AEDAC4 /* Item+CoreDataProperties.swift in Sources */,
 				70DBE07823FBC7F200BB4A24 /* CollectionViewSectionBuilder.swift in Sources */,
 				70DB2C7C23F5270E00AEDAC4 /* AppDelegate.swift in Sources */,
+				70DBE08523FD2A7800BB4A24 /* ViewModelProvided.swift in Sources */,
 				70DB2C8623F5270E00AEDAC4 /* EcommerceTemplate.xcdatamodeld in Sources */,
 				70DB2CA923F54B0800AEDAC4 /* Category+CoreDataClass.swift in Sources */,
 				70DB2C7E23F5270E00AEDAC4 /* SceneDelegate.swift in Sources */,
 				70DB2CAF23F54B0800AEDAC4 /* Tag+CoreDataClass.swift in Sources */,
 				70DBE07F23FD14C700BB4A24 /* CategoryService.swift in Sources */,
 				70DB2CAB23F54B0800AEDAC4 /* Item+CoreDataClass.swift in Sources */,
+				70DBE08123FD1AC500BB4A24 /* CategoryViewModel.swift in Sources */,
 				70DB2CAD23F54B0800AEDAC4 /* SortingValues+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
