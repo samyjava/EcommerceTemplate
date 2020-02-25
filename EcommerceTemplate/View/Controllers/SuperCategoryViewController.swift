@@ -9,7 +9,7 @@
 import UIKit
 
 class SuperCategoryViewController: UIViewController, ViewModelProvided {
-
+    
     //Outlets
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
@@ -18,7 +18,7 @@ class SuperCategoryViewController: UIViewController, ViewModelProvided {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         /// Temporary -------------------
         let categoryService = CategoryService(appDelegate: UIApplication.shared.delegate as! AppDelegate)
         self.setViewModel(viewModel: CategoryViewModel(appDelegate: UIApplication.shared.delegate as! AppDelegate, categoryService: categoryService))
@@ -31,6 +31,9 @@ class SuperCategoryViewController: UIViewController, ViewModelProvided {
 
 extension SuperCategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell {
+            viewModel.tapOn(category: cell.category, in: self)
+            collectionView.deselectItem(at: indexPath, animated: true)
+        }
     }
 }

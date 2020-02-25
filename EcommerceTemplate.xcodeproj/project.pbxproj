@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		708CC83D2405055400D42AF6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708CC83C2405055400D42AF6 /* DetailViewController.swift */; };
+		708CC83F2405065800D42AF6 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708CC83E2405065800D42AF6 /* DetailViewModel.swift */; };
 		70DB2C7C23F5270E00AEDAC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2C7B23F5270E00AEDAC4 /* AppDelegate.swift */; };
 		70DB2C7E23F5270E00AEDAC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2C7D23F5270E00AEDAC4 /* SceneDelegate.swift */; };
 		70DB2C8023F5270E00AEDAC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DB2C7F23F5270E00AEDAC4 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		70DBE08523FD2A7800BB4A24 /* ViewModelProvided.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */; };
 		70DBE08823FD657900BB4A24 /* Section+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08623FD657900BB4A24 /* Section+CoreDataClass.swift */; };
 		70DBE08923FD657900BB4A24 /* Section+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08723FD657900BB4A24 /* Section+CoreDataProperties.swift */; };
+		70DBE08C24011DFA00BB4A24 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 70DBE08B24011DFA00BB4A24 /* sample.json */; };
+		70DBE08E24011E5000BB4A24 /* DataImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DBE08D24011E5000BB4A24 /* DataImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		708CC83C2405055400D42AF6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		708CC83E2405065800D42AF6 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		70DB2C7823F5270E00AEDAC4 /* EcommerceTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70DB2C7B23F5270E00AEDAC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70DB2C7D23F5270E00AEDAC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,8 @@
 		70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProvided.swift; sourceTree = "<group>"; };
 		70DBE08623FD657900BB4A24 /* Section+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Section+CoreDataClass.swift"; sourceTree = "<group>"; };
 		70DBE08723FD657900BB4A24 /* Section+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Section+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		70DBE08B24011DFA00BB4A24 /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		70DBE08D24011E5000BB4A24 /* DataImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,8 @@
 		70DB2C7A23F5270E00AEDAC4 /* EcommerceTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				70DBE08B24011DFA00BB4A24 /* sample.json */,
+				70DBE08A23FD6DC000BB4A24 /* SampleData */,
 				70DBE07A23FD11C900BB4A24 /* Business */,
 				70DBE07923FD11BC00BB4A24 /* Services */,
 				70DB2CB123F55AA800AEDAC4 /* View */,
@@ -183,6 +193,7 @@
 			children = (
 				70DB2CB623F55CD000AEDAC4 /* SuperCategoryViewController.swift */,
 				70DBE08423FD2A7800BB4A24 /* ViewModelProvided.swift */,
+				708CC83C2405055400D42AF6 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 			children = (
 				70DBE07C23FD148700BB4A24 /* CategoryServiceType.swift */,
 				70DBE07E23FD14C700BB4A24 /* CategoryService.swift */,
+				70DBE08D24011E5000BB4A24 /* DataImporter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,8 +236,16 @@
 			isa = PBXGroup;
 			children = (
 				70DBE08023FD1AC500BB4A24 /* CategoryViewModel.swift */,
+				708CC83E2405065800D42AF6 /* DetailViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70DBE08A23FD6DC000BB4A24 /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DBE08C24011DFA00BB4A24 /* sample.json in Resources */,
 				70DB2C8B23F5271200AEDAC4 /* LaunchScreen.storyboard in Resources */,
 				70DB2CB423F55AED00AEDAC4 /* Item.storyboard in Resources */,
 				70DB2C8823F5271200AEDAC4 /* Assets.xcassets in Resources */,
@@ -332,9 +353,12 @@
 			files = (
 				70DB2C8023F5270E00AEDAC4 /* ViewController.swift in Sources */,
 				70DBE07523F92B1200BB4A24 /* CategoryCollectionViewCell.swift in Sources */,
+				708CC83D2405055400D42AF6 /* DetailViewController.swift in Sources */,
 				70DBE08923FD657900BB4A24 /* Section+CoreDataProperties.swift in Sources */,
+				70DBE08E24011E5000BB4A24 /* DataImporter.swift in Sources */,
 				70DB2CAA23F54B0800AEDAC4 /* Category+CoreDataProperties.swift in Sources */,
 				70DB2CB723F55CD000AEDAC4 /* SuperCategoryViewController.swift in Sources */,
+				708CC83F2405065800D42AF6 /* DetailViewModel.swift in Sources */,
 				70DB2CB023F54B0800AEDAC4 /* Tag+CoreDataProperties.swift in Sources */,
 				70DBE07D23FD148700BB4A24 /* CategoryServiceType.swift in Sources */,
 				70DB2CAE23F54B0800AEDAC4 /* SortingValues+CoreDataProperties.swift in Sources */,

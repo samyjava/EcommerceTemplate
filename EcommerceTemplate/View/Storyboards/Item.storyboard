@@ -27,27 +27,27 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SCCell" id="5Jt-Ed-Kew" customClass="CategoryCollectionViewCell" customModule="EcommerceTemplate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="142" height="326"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="401.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BF3-Vz-hb2">
-                                            <rect key="frame" x="0.0" y="0.0" width="142" height="326"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="141.5" height="401.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yp8-GO-jWI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="401.5"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="4" translatesAutoresizingMaskIntoConstraints="NO" id="u16-nj-Fhp">
-                                                    <rect key="frame" x="54.5" y="152.5" width="33.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="44.5" y="184" width="52.5" height="33.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compose your layout from a set of objects that support more adaptive and flexible arrangements." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-oJ-isl">
-                                                    <rect key="frame" x="5" y="178.5" width="132" height="142.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="5" y="222.5" width="131.5" height="174"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yp8-GO-jWI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="326"/>
-                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yp8-GO-jWI" firstAttribute="width" secondItem="BF3-Vz-hb2" secondAttribute="width" id="BPg-UY-Wps"/>

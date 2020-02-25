@@ -4,7 +4,7 @@
         <attribute name="coverImage" optional="YES" attributeType="URI"/>
         <attribute name="coverVideo" optional="YES" attributeType="URI"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
-        <attribute name="groupID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="size" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Item" inverseName="category" inverseEntity="Item"/>
@@ -51,8 +51,8 @@
     <elements>
         <element name="Category" positionX="226.40234375" positionY="-275.515625" width="128" height="178"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="238"/>
+        <element name="Section" positionX="426.62890625" positionY="-215.55078125" width="128" height="88"/>
         <element name="SortingValues" positionX="226.69140625" positionY="12" width="128" height="193"/>
         <element name="Tag" positionX="-77.13671875" positionY="-269.8828125" width="128" height="88"/>
-        <element name="Section" positionX="426.62890625" positionY="-215.55078125" width="128" height="88"/>
     </elements>
 </model>

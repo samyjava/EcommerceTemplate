@@ -10,11 +10,7 @@ import UIKit
 
 struct CategoryViewModel {
     
-    var mainDataSource: UICollectionViewDiffableDataSource<Section, Category>!
-    enum Section: CaseIterable {
-        case main
-        case sub
-    }
+    var mainDataSource: UICollectionViewDiffableDataSource<Int, Category>!
     
     let appDelegate: AppDelegate
     var categoryService: CategoryServiceType
@@ -25,10 +21,24 @@ struct CategoryViewModel {
         self.categoryService = categoryService
     }
     
+    func tapOn(category: Category, in viewController: UIViewController) {
+        //
+        let detailViewController = DetailViewController()
+        viewController.present(detailViewController, animated: true)
+    }
+    
     mutating func configureCollectionView(collectionView: UICollectionView){
-        collectionView.collectionViewLayout = self.collectionViewLayoutBuilder.createLayout(sections: [(.singleCol,.groupPaging),(.fourInAGroup,.groupPaging)])
+        let sections = try! appDelegate.persistentContainer.viewContext.fetch(Section.fetchRequest()) as! [Section]
+        var sectionsWithType = [(SectionType,UICollectionLayoutSectionOrthogonalScrollingBehavior)]()
         
-        mainDataSource = UICollectionViewDiffableDataSource<Section, Category>(collectionView: collectionView){
+        sections.forEach{
+            let type = SectionType(rawValue: $0.type)!
+            sectionsWithType.append((type,.groupPaging))
+        }
+        
+        collectionView.collectionViewLayout = self.collectionViewLayoutBuilder.createLayout(sections: sectionsWithType, sizeFactor: 1.0)
+        
+        mainDataSource = UICollectionViewDiffableDataSource<Int, Category>(collectionView: collectionView){
             (collectionView: UICollectionView, indexPath: IndexPath,
             category: Category) -> UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SCCell", for: indexPath) as! CategoryCollectionViewCell
@@ -38,14 +48,13 @@ struct CategoryViewModel {
         
         let fetchedObjects = try! self.categoryService.getAllCategories()
         
-        var snapShot = NSDiffableDataSourceSnapshot<Section, Category>()
-        snapShot.appendSections([.main])
-        let data1 = fetchedObjects.filter{Int($0.title!)! < 10}.sorted{Int($0.title!)! < Int($1.title!)!}
-        snapShot.appendItems(data1)
+        var snapShot = NSDiffableDataSourceSnapshot<Int, Category>()
         
-        snapShot.appendSections([.sub])
-        let data2 = fetchedObjects.filter{Int($0.title!)! >= 10}.sorted{Int($0.title!)! < Int($1.title!)!}
-        snapShot.appendItems(data2)
+        sections.sorted{ $0.order > $1.order}.forEach{ section in
+            snapShot.appendSections([Int(section.order)])
+            let data = fetchedObjects.filter{ $0.section == section}.sorted{ $0.order < $1.order}
+            snapShot.appendItems(data)
+        }
         mainDataSource.apply(snapShot)
     }
 }
