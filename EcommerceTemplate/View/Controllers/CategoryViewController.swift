@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuperCategoryViewController: UIViewController, ViewModelProvided {
+class CategoryViewController: UIViewController, ViewModelProvided {
     
     //Outlets
     @IBOutlet weak var mainCollectionView: UICollectionView!
@@ -29,7 +29,7 @@ class SuperCategoryViewController: UIViewController, ViewModelProvided {
     
 }
 
-extension SuperCategoryViewController: UICollectionViewDelegate {
+extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell {
             viewModel.tapOn(category: cell.category, in: self)

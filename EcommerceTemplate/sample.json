@@ -11,52 +11,6 @@
                 "items": [],
                 "tags": []
             }
-            ,{ "title" : "کارت هدیه",
-                "desc": "کارت هدیه ویژه سازمان ها و بقیه",
-                "coverImage": "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000019603.jpg",
-                "coverVideo": "",
-                "order": 2,
-                "items": [],
-                "tags": []
-            },{ "title" : "پرداخت",
-                "desc": "اپلیکیشن پرداخت خیلی خوب",
-                "coverImage": "https://dkstatics-public-2.digikala.com/digikala-adservice-banners/1000005393.jpg",
-                "coverVideo": "",
-                "order": 3,
-                "items": [],
-                "tags": []
-            }
-
-        ]
-    },
-    {
-        "order" : 1 ,
-        "type" : 3 ,
-        "categories" : [
-            { "title" : "خشکبار",
-                "desc": "انواع آجیل و خشکبار و محصولات دیگر",
-                "coverImage": "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000019317.jpg",
-                "coverVideo": "",
-                "order": 1,
-                "items": [],
-                "tags": []
-            }
-            ,{ "title" : "کارت هدیه",
-                "desc": "کارت هدیه ویژه سازمان ها و بقیه",
-                "coverImage": "https://dkstatics-public.digikala.com/digikala-adservice-banners/1000019603.jpg",
-                "coverVideo": "",
-                "order": 2,
-                "items": [],
-                "tags": []
-            },{ "title" : "پرداخت",
-                "desc": "اپلیکیشن پرداخت خیلی خوب",
-                "coverImage": "https://dkstatics-public-2.digikala.com/digikala-adservice-banners/1000005393.jpg",
-                "coverVideo": "",
-                "order": 3,
-                "items": [],
-                "tags": []
-            }
-
         ]
     }
 ]

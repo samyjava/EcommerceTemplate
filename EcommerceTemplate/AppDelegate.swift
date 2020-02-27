@@ -19,16 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let categories = try! persistentContainer.viewContext.fetch(Category.fetchRequest()) as! [Category]
         let sections = try! persistentContainer.viewContext.fetch(Section.fetchRequest()) as! [Section]
+        let items = try! persistentContainer.viewContext.fetch(Item.fetchRequest()) as! [Item]
         categories.forEach{
             persistentContainer.viewContext.delete($0)
         }
         sections.forEach{
             persistentContainer.viewContext.delete($0)
         }
+        items.forEach{
+            persistentContainer.viewContext.delete($0)
+        }
         saveContext()
         
         let importer = DataImporter()
         try! importer.importTempData()
+        try! importer.importItems()
         return true
     }
 

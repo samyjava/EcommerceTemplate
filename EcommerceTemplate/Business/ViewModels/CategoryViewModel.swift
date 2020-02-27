@@ -23,12 +23,16 @@ struct CategoryViewModel {
     
     func tapOn(category: Category, in viewController: UIViewController) {
         //
-        let detailViewController = DetailViewController()
-        viewController.present(detailViewController, animated: true)
+        let itemViewController = ItemViewController()
+        let itemService = ItemService(appDelegate: appDelegate)
+        let itemViewModel = ItemViewModel(appDelegate: appDelegate, itemService: itemService, category: category)
+        itemViewController.setViewModel(viewModel: itemViewModel)
+        viewController.present(itemViewController, animated: true)
     }
     
     mutating func configureCollectionView(collectionView: UICollectionView){
-        let sections = try! appDelegate.persistentContainer.viewContext.fetch(Section.fetchRequest()) as! [Section]
+        var sections = try! appDelegate.persistentContainer.viewContext.fetch(Section.fetchRequest()) as! [Section]
+        sections = sections.filter{$0.categories!.count > 0}
         var sectionsWithType = [(SectionType,UICollectionLayoutSectionOrthogonalScrollingBehavior)]()
         
         sections.forEach{

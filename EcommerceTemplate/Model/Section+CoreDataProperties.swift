@@ -2,7 +2,7 @@
 //  Section+CoreDataProperties.swift
 //  EcommerceTemplate
 //
-//  Created by Sam Javadizadeh on 2/19/20.
+//  Created by Sam Javadizadeh on 2/26/20.
 //  Copyright © 2020 Sam Javadizadeh. All rights reserved.
 //
 //
@@ -20,6 +20,7 @@ extension Section {
     @NSManaged public var order: Int16
     @NSManaged public var type: Int16
     @NSManaged public var categories: NSSet?
+    @NSManaged public var items: NSSet?
 
 }
 
@@ -37,5 +38,22 @@ extension Section {
 
     @objc(removeCategories:)
     @NSManaged public func removeFromCategories(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for items
+extension Section {
+
+    @objc(addItemsObject:)
+    @NSManaged public func addToItems(_ value: Item)
+
+    @objc(removeItemsObject:)
+    @NSManaged public func removeFromItems(_ value: Item)
+
+    @objc(addItems:)
+    @NSManaged public func addToItems(_ values: NSSet)
+
+    @objc(removeItems:)
+    @NSManaged public func removeFromItems(_ values: NSSet)
 
 }
